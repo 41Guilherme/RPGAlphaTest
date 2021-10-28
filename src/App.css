@@ -1,0 +1,9 @@
+body{
+  background: url('./components/images/download.png') no-repeat;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
