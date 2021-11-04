@@ -3,7 +3,9 @@ import { Fragment } from "react";
 import styled from "styled-components";
 import {Title, Button} from '../../styles/styled'
 import { Link } from "react-router-dom";
-import c1 from '../../images/C1.png'
+import c1 from '../../images/C1.png';
+import Lista from '../Dados';
+import { useStates } from "../provider";
 
 const Div = styled.div`
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfcu4kpkjo3wlvpfFZB06yvvEA2riYgW4Vw&usqp=CAU') ;
@@ -22,7 +24,7 @@ const Div = styled.div`
 `
 const FotoArea = styled.div`
     background: url(${c1})no-repeat ;
-    background-color: #686464;
+    background-color: yellow;
     padding: 10px;
     width: 45%;
     height: 280px;
@@ -47,89 +49,109 @@ const Força = styled.div`
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #5f0606;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
     border-radius: 25px;
     border: solid #000 3px;
-    color: #fff;
-    font-size: 5rem;
+    color: #000;
+    font-size: 1rem;
     span{
         width: 100%;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
+        color: yellow;
+    }
+    button{
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
     }
 `
-
 const Dex = styled.div`
     display:flex;
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #1b630d;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
     border-radius: 25px;
     border: solid #000 3px;
-    color: #fff;
-    font-size: 5rem;
+    color: #000;
+    font-size: 1rem;
     span{
         width: 100%;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
+        color: yellow;
+    }
+    button{
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
     }
 `
-
 const Wis = styled.div`
     display:flex;
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #121b68;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
     border-radius: 25px;
     border: solid #000 3px;
-    color: #fff;
-    font-size: 5rem;
+    color: #000;
+    font-size: 1rem;
     span{
         width: 100%;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
+        color: yellow;
+    }
+    button{
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
     }
 `
-
 const Con = styled.div`
     display:flex;
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #ccc01c;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
     border-radius: 25px;
     border: solid #000 3px;
-    color: #fff;
-    font-size: 5rem;
+    color: #000;
+    font-size: 1rem;
     span{
         width: 100%;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
+        color: yellow;
+    }
+    button{
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
     }
 `
-
 const Skills = styled.div`
     flex-wrap: wrap;
     display: flex;
@@ -138,25 +160,42 @@ const Skills = styled.div`
     height: 410px;
     
 `
-
 const Part1 = styled.div`
-    background: url('https://cdn.awsli.com.br/1107/1107697/arquivos/Grid_02%20.jpg ');
+    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25b7ba9a-dc48-4015-923b-cb47a37af504/dawoesj-b8fe4a88-cfaf-4223-83d9-33019a12a273.jpg/v1/fill/w_1024,h_705,q_75,strp/grid_para_rpg_de_mesa_by_rarameth_dawoesj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzA1IiwicGF0aCI6IlwvZlwvMjViN2JhOWEtZGM0OC00MDE1LTkyM2ItY2I0N2EzN2FmNTA0XC9kYXdvZXNqLWI4ZmU0YTg4LWNmYWYtNDIyMy04M2Q5LTMzMDE5YTEyYTI3My5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.evP5wSLH6dEQpQtat60ENqWTW7QkvTwQBFMq-_vE6ng ');
     padding: 10px;
     width: 47%;
     display: flex;
-    justify-content: row;
+    justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
+    color: yellow;
     h1{
-        background-color: purple;
+        background-color: #000;
         border: solid 2px #000;
         height: 40px;
-        width: 100%;
-        display: flex;
+        width: 340px;
+        position: absolute;
         justify-content: center;
+        margin-bottom: 0;
+    }
+    div{
+        background-color: white;
+        display: flex;
+        width: 45%;
+        height: 30%;
+        margin: 2px;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        border: solid 2px #000;
+
+    }
+    header{
+        display: flex;
+        width: 90%;
+        height: 50px;
+        border-radius: 20px;
     }
 `
-
 const Part2 = styled.div`
     background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25b7ba9a-dc48-4015-923b-cb47a37af504/dawoesj-b8fe4a88-cfaf-4223-83d9-33019a12a273.jpg/v1/fill/w_1024,h_705,q_75,strp/grid_para_rpg_de_mesa_by_rarameth_dawoesj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzA1IiwicGF0aCI6IlwvZlwvMjViN2JhOWEtZGM0OC00MDE1LTkyM2ItY2I0N2EzN2FmNTA0XC9kYXdvZXNqLWI4ZmU0YTg4LWNmYWYtNDIyMy04M2Q5LTMzMDE5YTEyYTI3My5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.evP5wSLH6dEQpQtat60ENqWTW7QkvTwQBFMq-_vE6ng');
     padding: 10px;
@@ -165,8 +204,9 @@ const Part2 = styled.div`
     justify-content: row;
     text-align: center;
     flex-wrap: wrap;
+    color: yellow;
     h1{
-        background-color: purple;
+        background-color: #000;
         border: solid 2px #000;
         height: 40px;
         width: 100%;
@@ -182,10 +222,11 @@ const Part2 = styled.div`
     }
     button{
         height: 29px;
-        background-color: purple;
+        background-color: yellow;
     }
 
     input{
+        border-color: #000;
         margin-top: 0;
         width: 100%;
         height: 25px;
@@ -195,22 +236,25 @@ const Part2 = styled.div`
         width: 100%;
         height: 80%;
         p{
-            background-color: #fff;
+            background-color: #000;
             display: flex;
             justify-content: space-between;
         }
     }
 `
 
-const S1 = styled.div`
-    background-color: #000;
-`
 
 export default function Cruze(){
 
     const [item, setItem] = useState('')
     const [todos, setTodos] = useState([]);
 
+
+
+    function deletar(lista){
+        lista.pop()
+
+    }
     return(
         <Fragment>
             <Title>
@@ -223,16 +267,28 @@ export default function Cruze(){
             <Div>
                <FotoArea/>
                 <Stats>
-                    <Força><span>Força</span>+3</Força>
-                    <Dex><span>Destreza</span>+1</Dex>
-                    <Wis><span>Sabedoria</span>-2</Wis>
-                    <Con><span>Constituição</span>+1</Con>
+                    <Força><span>Força <hr/> +3 <hr/><button>+</button> <button>-</button></span></Força>
+                    <Dex><span>Destreza <hr/> +1 <hr/><button>+</button> <button>-</button></span></Dex>
+                    <Wis><span>Sabedoria <hr/> -2 <hr/><button>+</button> <button>-</button></span></Wis>
+                    <Con><span>Constituição <hr/> +1 <hr/> <button>+</button> <button>-</button></span></Con>
                 </Stats>
 
                 <Skills>
                     <Part1>
                         <h1>Skills</h1>
+                        <header></header>
+                        <div>
 
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
+                        <div>
+
+                        </div>
                     </Part1>
                     <Part2>
                         <h1>Inventário</h1>
@@ -255,7 +311,7 @@ export default function Cruze(){
                         </form>
                         <ul>
                             {todos.map((todo, index) => (
-                            <p key={index}>{todo} <button>X</button></p> 
+                            <p key={index}># {todo} <button onClick={() => deletar(todos)}>X</button></p> 
                             ))}
                         </ul>
                     </Part2>
