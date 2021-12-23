@@ -23,7 +23,7 @@ const Div = styled.div`
 `
 const FotoArea = styled.div`
     background: url(${c1})no-repeat ;
-    background-color: #910c0c;
+    background-color: #708090;
     padding: 10px;
     width: 45%;
     height: 280px;
@@ -42,7 +42,7 @@ const Stats = styled.div`
     border-top-right-radius: 25px;
     margin-bottom: 0;
     button{
-        background-color: yellow;
+        background-color: #708090;
         border-radius: 20rem;
         font-size: 1.5rem;
     }
@@ -67,7 +67,7 @@ const Força = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #708090;
     }
     button{
         margin-top: 2px;
@@ -94,7 +94,7 @@ const Dex = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #708090;
     }
     button{
         margin-top: 2px;
@@ -121,7 +121,7 @@ const Wis = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #708090;
     }
     button{
         margin-top: 2px;
@@ -148,7 +148,7 @@ const Con = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #708090;
     }
     button{
         margin-top: 2px;
@@ -172,7 +172,7 @@ const Part1 = styled.div`
     justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
-    color: yellow;
+    color: #708090;
     h1{
         background-color: #000;
         border: solid 2px #000;

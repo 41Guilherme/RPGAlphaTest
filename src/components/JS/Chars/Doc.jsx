@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import styled from "styled-components";
 import {Title, Button} from '../../styles/styled'
 import { Link } from "react-router-dom";
-import c1 from '../../images/C1.png';
+import c1 from '../../images/C3.png';
 import { useStates } from "../provider";
 
 const Div = styled.div`
@@ -23,7 +23,7 @@ const Div = styled.div`
 `
 const FotoArea = styled.div`
     background: url(${c1})no-repeat ;
-    background-color: #910c0c;
+    background-color: #006400;
     padding: 10px;
     width: 45%;
     height: 280px;
@@ -42,7 +42,7 @@ const Stats = styled.div`
     border-top-right-radius: 25px;
     margin-bottom: 0;
     button{
-        background-color: yellow;
+        background-color: #006400;
         border-radius: 20rem;
         font-size: 1.5rem;
     }
@@ -67,7 +67,7 @@ const Força = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #006400;
     }
     button{
         margin-top: 2px;
@@ -94,7 +94,7 @@ const Dex = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #006400;
     }
     button{
         margin-top: 2px;
@@ -121,7 +121,7 @@ const Wis = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #006400;
     }
     button{
         margin-top: 2px;
@@ -148,7 +148,7 @@ const Con = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #006400;
     }
     button{
         margin-top: 2px;
@@ -172,7 +172,7 @@ const Part1 = styled.div`
     justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
-    color: yellow;
+    color: #006400;
     h1{
         background-color: #000;
         border: solid 2px #000;
@@ -221,7 +221,7 @@ export default function Cruze(){
     const [todos, setTodos] = useState([]);
     
 
-    const { forca1,dex1,wis1,con1,setForca1, setDex1, setWis1, setCon1} = useStates()
+    const { forca3,dex3,wis3,con3,setForca3, setDex3, setWis3, setCon3} = useStates()
     function deletar(lista){
         lista.pop()
 
@@ -238,10 +238,10 @@ export default function Cruze(){
             <Div>
                <FotoArea/>
                 <Stats>
-                    <Força><span>Força <hr/> +{forca1} <br/><button onClick={() => setForca1(forca1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setForca1(forca1 - 1)} >-</button></span></Força>
-                    <Dex><span>Destreza <hr/> +{dex1}<br/><button onClick={() => setDex1(dex1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setDex1(dex1 - 1)}>-</button></span></Dex>
-                    <Wis><span>Sabedoria <hr/> {wis1} <br/><button onClick={() => setWis1(wis1 + 1)}>+</button> <span>&nbsp; &nbsp;</span>  <button onClick={() => setWis1(wis1 - 1)}>-</button></span></Wis>
-                    <Con><span>Constituição <hr/> +{con1} <br/> <button onClick={() => setCon1(con1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setCon1(con1 - 1)}>-</button></span></Con>
+                    <Força><span>Força <hr/> {forca3} <br/><button onClick={() => setForca3(forca3 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setForca3(forca3 - 1)} >-</button></span></Força>
+                    <Dex><span>Destreza <hr/> {dex3}<br/><button onClick={() => setDex3(dex3 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setDex3(dex3 - 1)}>-</button></span></Dex>
+                    <Wis><span>Sabedoria <hr/> {wis3} <br/><button onClick={() => setWis3(wis3 + 1)}>+</button> <span>&nbsp; &nbsp;</span>  <button onClick={() => setWis3(wis3 - 1)}>-</button></span></Wis>
+                    <Con><span>Constituição <hr/> {con3} <br/> <button onClick={() => setCon3(con3 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setCon3(con3 - 1)}>-</button></span></Con>
                 </Stats>
 
                 <Skills>
@@ -250,36 +250,37 @@ export default function Cruze(){
                         <header></header>
                         <div>
                 
-                            FÉ DE BATALHA
-                            <p>Crita com 18 e 19 e ao realizar Ataques Criticos se Cura</p>
+                            SOBREVIVENTE
+                            <p>Sua Insanidade aumenta muito lentamente e é imune a peste</p>
                         </div>
                         <div>
-                            CORTE SEQUENCIAL
-                            <p>Ao matar inimigos ganha um novo turno</p>
+                            CORTE ENVENENADO
+                            <p>Ataques com laminas aplicam veneno de dano gradual</p>
                         </div>
                         <div>
-                            MÃOS PESADAS
-                            <p>Seus ataques atordoam alvos com pouca vida</p>
+                            SUTURAR ALIADO
+                            <p>Consegue curar ferimentos e amenizar a peste em aliados</p>
                         </div>
                         <div>
-                            "FAZ O URRO"
-                            <p>Um grito que buffa aliados e nerfa inimigos</p>
+                            BOMBAS DE TOXINAS
+                            <p>Ataca até 5 inimigos causando dano de veneno</p>
                         </div>
                     </Part1>
                     <Part1>
                         <h1>Inventário</h1>
                         <header></header>
                         <div>
-                            ESPADA DE AÇO
+                            ADAGA DE AÇO
                         </div>
                         <div>
-                            LANÇA DE BATALHA
+                            BOMBAS
+                            <p>Veneno, Polvora e Fumaça </p>
                         </div>
                         <div>
-                            ARMADURA DE PLACAS
+                            MANTO DA PESTE NEGRA
                         </div>
                         <div>
-                            CAPACETE DE CRUZADO
+                            DARDOS DE ARREMESSO
                         </div>
                     </Part1>
                 </Skills>
