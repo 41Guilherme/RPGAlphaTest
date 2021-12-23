@@ -4,7 +4,6 @@ import styled from "styled-components";
 import {Title, Button} from '../../styles/styled'
 import { Link } from "react-router-dom";
 import c1 from '../../images/C1.png';
-import Lista from '../Dados';
 import { useStates } from "../provider";
 
 const Div = styled.div`
@@ -24,7 +23,7 @@ const Div = styled.div`
 `
 const FotoArea = styled.div`
     background: url(${c1})no-repeat ;
-    background-color: #686464;
+    background-color: #910c0c;
     padding: 10px;
     width: 45%;
     height: 280px;
@@ -42,6 +41,11 @@ const Stats = styled.div`
     height: 280px;
     border-top-right-radius: 25px;
     margin-bottom: 0;
+    button{
+        background-color: yellow;
+        border-radius: 20rem;
+        font-size: 1.5rem;
+    }
     
 `
 const Força = styled.div`
@@ -49,7 +53,7 @@ const Força = styled.div`
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #C0C0C0;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
@@ -66,7 +70,9 @@ const Força = styled.div`
         color: yellow;
     }
     button{
-        margin-bottom: 0;
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
     }
 `
 const Dex = styled.div`
@@ -74,7 +80,7 @@ const Dex = styled.div`
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #C0C0C0;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
@@ -89,6 +95,11 @@ const Dex = styled.div`
         background-color: #000; 
         border-radius: 10px;
         color: yellow;
+    }
+    button{
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
     }
 `
 const Wis = styled.div`
@@ -96,7 +107,7 @@ const Wis = styled.div`
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #C0C0C0;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
@@ -112,13 +123,18 @@ const Wis = styled.div`
         border-radius: 10px;
         color: yellow;
     }
+    button{
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
+    }
 `
 const Con = styled.div`
     display:flex;
     justify-content: column;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #C0C0C0;
+    background-color: #000;
     padding: 10px;
     width: 100px;;
     height:100px;
@@ -133,6 +149,11 @@ const Con = styled.div`
         background-color: #000; 
         border-radius: 10px;
         color: yellow;
+    }
+    button{
+        margin-top: 2px;
+        width: 35px;
+        border-radius: 5px;
     }
 `
 const Skills = styled.div`
@@ -148,77 +169,59 @@ const Part1 = styled.div`
     padding: 10px;
     width: 47%;
     display: flex;
-    justify-content: row;
+    justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
+    color: yellow;
     h1{
-        background-color: #7c0f0f;
+        background-color: #000;
         border: solid 2px #000;
         height: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    div{
-        background-color: white;
-    }
-`
-const Part2 = styled.div`
-    background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25b7ba9a-dc48-4015-923b-cb47a37af504/dawoesj-b8fe4a88-cfaf-4223-83d9-33019a12a273.jpg/v1/fill/w_1024,h_705,q_75,strp/grid_para_rpg_de_mesa_by_rarameth_dawoesj-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzA1IiwicGF0aCI6IlwvZlwvMjViN2JhOWEtZGM0OC00MDE1LTkyM2ItY2I0N2EzN2FmNTA0XC9kYXdvZXNqLWI4ZmU0YTg4LWNmYWYtNDIyMy04M2Q5LTMzMDE5YTEyYTI3My5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.evP5wSLH6dEQpQtat60ENqWTW7QkvTwQBFMq-_vE6ng');
-    padding: 10px;
-    width: 47%;
-    display: flex;
-    justify-content: row;
-    text-align: center;
-    flex-wrap: wrap;
-    h1{
-        background-color: #7c0f0f;
-        border: solid 2px #000;
-        height: 40px;
-        width: 100%;
-        display: flex;
+        width: 340px;
+        position: absolute;
         justify-content: center;
         margin-bottom: 0;
     }
-    form{
-        position: absolute;
-        margin-top: 5rem;
+    div{
+        background-color: white;
         display: flex;
-        width: 340px;
-    }
-    button{
-        height: 29px;
-        background-color: #7c0f0f;
-    }
-
-    input{
-        border-color: red;
-        margin-top: 0;
-        width: 100%;
-        height: 25px;
-    }
-    ul{
-        margin-top: 4rem;
-        width: 100%;
-        height: 80%;
+        width: 45%;
+        height: 30%;
+        margin: 2px;
+        margin-bottom: 5px;
+        border-radius: 20px;
+        border: solid 2px #000;
+        color: #910c0c;
+        padding: 2px;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: 700;
+        font-size: 1.2rem;
         p{
-            background-color: #fff;
-            display: flex;
-            justify-content: space-between;
+            font-weight: 700;
+            color: #000;
+            font-size: 0.9rem;
         }
+
+    }
+    header{
+        display: flex;
+        width: 90%;
+        height: 50px;
+        border-radius: 20px;
     }
 `
-const S1 = styled.div`
-    background-color: #000;
-`
+
+
+
 
 export default function Cruze(){
 
     const [item, setItem] = useState('')
     const [todos, setTodos] = useState([]);
+    
 
-
-
+    const { forca1,dex1,wis1,con1,setForca1, setDex1, setWis1, setCon1} = useStates()
     function deletar(lista){
         lista.pop()
 
@@ -235,44 +238,50 @@ export default function Cruze(){
             <Div>
                <FotoArea/>
                 <Stats>
-                    <Força><span>Força <hr/> +3 <br/><button>+</button><button>-</button></span></Força>
-                    <Dex><span>Destreza <hr/> +1 <br/><button>+</button><button>-</button></span></Dex>
-                    <Wis><span>Sabedoria <hr/> -2 <br/><button>+</button><button>-</button></span></Wis>
-                    <Con><span>Constituição <hr/> +1 <br/> <button>+</button><button>-</button></span></Con>
+                    <Força><span>Força <hr/> +{forca1} <br/><button onClick={() => setForca1(forca1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setForca1(forca1 - 1)} >-</button></span></Força>
+                    <Dex><span>Destreza <hr/> +{dex1}<br/><button onClick={() => setDex1(dex1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setDex1(dex1 - 1)}>-</button></span></Dex>
+                    <Wis><span>Sabedoria <hr/> {wis1} <br/><button onClick={() => setWis1(wis1 + 1)}>+</button> <span>&nbsp; &nbsp;</span>  <button onClick={() => setWis1(wis1 - 1)}>-</button></span></Wis>
+                    <Con><span>Constituição <hr/> +{con1} <br/> <button onClick={() => setCon1(con1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setCon1(con1 - 1)}>-</button></span></Con>
                 </Stats>
 
                 <Skills>
                     <Part1>
                         <h1>Skills</h1>
+                        <header></header>
                         <div>
-
+                
+                            FÉ DE BATALHA
+                            <p>Crita com 18 e 19 e ao realizar Ataques Criticos se Cura</p>
+                        </div>
+                        <div>
+                            CORTE SEQUENCIAL
+                            <p>Ao matar inimigos ganha um novo turno</p>
+                        </div>
+                        <div>
+                            MÃOS PESADAS
+                            <p>Seus ataques atordoam alvos com pouca vida</p>
+                        </div>
+                        <div>
+                            "FAZ O URRO"
+                            <p>Um grito que buffa aliados e nerfa inimigos</p>
                         </div>
                     </Part1>
-                    <Part2>
+                    <Part1>
                         <h1>Inventário</h1>
-                        <form
-                            onSubmit={event => {
-                            event.preventDefault();
-                            setTodos([...todos, item]);
-                            if (!!item) {
-                                setTodos([...todos, item]);
-                                setItem("");
-                              }
-                            }}>
-
-                            <input
-                            type="text"
-                            
-                            onChange={event => setItem(event.target.value)}
-                            />
-                            <button type="submit">Add</button>
-                        </form>
-                        <ul>
-                            {todos.map((todo, index) => (
-                            <p key={index}>{todo} <button onClick={() => deletar(todos)}>X</button></p> 
-                            ))}
-                        </ul>
-                    </Part2>
+                        <header></header>
+                        <div>
+                            ESPADA DE AÇO
+                        </div>
+                        <div>
+                            LANÇA DE BATALHA
+                        </div>
+                        <div>
+                            ARMADURA DE PLACAS
+                        </div>
+                        <div>
+                            CAPACETE DE CRUZADO
+                        </div>
+                    </Part1>
                 </Skills>
                
                

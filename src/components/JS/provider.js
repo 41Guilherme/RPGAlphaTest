@@ -1,36 +1,39 @@
 import React, { createContext, useContext, useState } from "react";
+import { Lista } from "./Dados";
 
 const StatesContext = createContext()
 
 export const StatesProvider = ({children}) => {
     
-    const [forca1, setForca1] = useState()
-    const [forca2, setForca2] = useState()
-    const [forca3, setForca3] = useState()
-    const [forca4, setForca4] = useState()
-    const [forca5, setForca5] = useState()
-    const [forca6, setForca6] = useState()
+    const List = Lista
 
-    const [dex1, setDex1] = useState()
-    const [dex2, setDex2] = useState()
-    const [dex3, setDex3] = useState()
-    const [dex4, setDex4] = useState()
-    const [dex5, setDex5] = useState()
-    const [dex6, setDex6] = useState()
+    const [forca1, setForca1] = useState(List[0].For)
+    const [forca2, setForca2] = useState(List[1].For)
+    const [forca3, setForca3] = useState(List[2].For)
+    const [forca4, setForca4] = useState(List[3].For)
+    const [forca5, setForca5] = useState(List[4].For)
+    const [forca6, setForca6] = useState(List[5].For)
 
-    const [wis1, setWis1] = useState()
-    const [wis2, setWis2] = useState()
-    const [wis3, setWis3] = useState()
-    const [wis4, setWis4] = useState()
-    const [wis5, setWis5] = useState()
-    const [wis6, setWis6] = useState()
+    const [dex1, setDex1] = useState(List[0].Dex)
+    const [dex2, setDex2] = useState(List[1].Dex)
+    const [dex3, setDex3] = useState(List[2].Dex)
+    const [dex4, setDex4] = useState(List[3].Dex)
+    const [dex5, setDex5] = useState(List[4].Dex)
+    const [dex6, setDex6] = useState(List[5].Dex)
 
-    const [con1, setCon1] = useState()
-    const [con2, setCon2] = useState()
-    const [con3, setCon3] = useState()
-    const [con4, setCon4] = useState()
-    const [con5, setCon5] = useState()
-    const [con6, setCon6] = useState()
+    const [wis1, setWis1] = useState(List[0].Wis)
+    const [wis2, setWis2] = useState(List[1].Wis)
+    const [wis3, setWis3] = useState(List[2].Wis)
+    const [wis4, setWis4] = useState(List[3].Wis)
+    const [wis5, setWis5] = useState(List[4].Wis)
+    const [wis6, setWis6] = useState(List[5].Wis)
+
+    const [con1, setCon1] = useState(List[0].Con)
+    const [con2, setCon2] = useState(List[1].Con)
+    const [con3, setCon3] = useState(List[2].Con)
+    const [con4, setCon4] = useState(List[3].Con)
+    const [con5, setCon5] = useState(List[4].Con)
+    const [con6, setCon6] = useState(List[5].Con)
 
     return(
         <StatesContext.Provider value={{

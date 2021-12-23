@@ -11,6 +11,7 @@ import {Link} from "react-router-dom";
 import Data from './BaseBattle';
 import { D20, Lista } from './Dados';
 import Rolar from './RollDados';
+import { useStates } from './provider';
 
 const Div = styled.div`
     padding: 10px;
@@ -203,7 +204,6 @@ const Name = styled.h4`
     display: flex;
     justify-content: space-around;
 `
-
 const Stats = styled.div`
     border-radius: 10px;
     display: flex;
@@ -239,6 +239,18 @@ export default function Page(){
     const [value6, setValue6] = useState(0);
     const newLista = Lista
 
+    const { 
+        forca1,forca2,forca3,forca4,forca5,forca6,
+
+        dex1,dex2,dex3,dex4,dex5,dex6,
+
+        wis1,wis2,wis3,wis4,wis5,wis6,
+        
+        con1,con2,con3,con4,con5,con6
+        
+    } = useStates()
+
+
     function Clear(){
         setValue1(0)
         setValue2(0)
@@ -263,10 +275,10 @@ export default function Page(){
                         <Link to='/char'><Button1>?</Button1></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue1(D20(newLista[0].For))}>For <br/> +{newLista[0].For}</StatsF>
-                            <StatsF onClick={() => setValue1(D20(newLista[0].Dex))}>Dex <br/> +{newLista[0].Dex}</StatsF>
-                            <StatsF onClick={() => setValue1(D20(newLista[0].Wis))}>Wis <br/> {newLista[0].Wis}</StatsF>
-                            <StatsF onClick={() => setValue1(D20(newLista[0].Con))}>Con <br/> +{newLista[0].Con}</StatsF>
+                            <StatsF onClick={()=> setValue1(D20(forca1))}>For <br/> +{forca1}</StatsF>
+                            <StatsF onClick={() => setValue1(D20(dex1))}>Dex <br/> +{dex1}</StatsF>
+                            <StatsF onClick={() => setValue1(D20(wis1))}>Wis <br/> {wis1}</StatsF>
+                            <StatsF onClick={() => setValue1(D20(con1))}>Con <br/> +{con1}</StatsF>
                         </Stats>
                     </Info1>
                 </Char1>
@@ -276,10 +288,10 @@ export default function Page(){
                         <Link to='/char1'><Button2>?</Button2></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue2(D20(newLista[1].For))}>For <br/> +{newLista[1].For}</StatsF>
-                            <StatsF onClick={()=> setValue2(D20(newLista[1].Dex))}>Dex <br/> {newLista[1].Dex}</StatsF>
-                            <StatsF onClick={()=> setValue2(D20(newLista[1].Wis))}>Wis <br/> {newLista[1].Wis}</StatsF>
-                            <StatsF onClick={()=> setValue2(D20(newLista[1].Con))}>Con <br/> +{newLista[1].Con}</StatsF>
+                            <StatsF onClick={()=> setValue2(D20(forca2))}>For <br/> +{forca2}</StatsF>
+                            <StatsF onClick={()=> setValue2(D20(dex2))}>Dex <br/> {dex2}</StatsF>
+                            <StatsF onClick={()=> setValue2(D20(wis2))}>Wis <br/> {wis2}</StatsF>
+                            <StatsF onClick={()=> setValue2(D20(con2))}>Con <br/> +{con2}</StatsF>
                         </Stats>
                     </Info1>
                 </Char2>
@@ -289,10 +301,10 @@ export default function Page(){
                         <Link to='/char2'><Button3 >?</Button3></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue3(D20(newLista[2].For))}>For <br/> {newLista[2].For}</StatsF>
-                            <StatsF onClick={()=> setValue3(D20(newLista[2].Dex))}>Dex <br/> +{newLista[2].Dex}</StatsF>
-                            <StatsF onClick={()=> setValue3(D20(newLista[2].Wis))}>Wis <br/> +{newLista[2].Wis}</StatsF>
-                            <StatsF onClick={()=> setValue3(D20(newLista[2].Con))}>Con <br/> {newLista[2].Con}</StatsF>
+                            <StatsF onClick={()=> setValue3(D20(forca3))}>For <br/> {forca3}</StatsF>
+                            <StatsF onClick={()=> setValue3(D20(dex3))}>Dex <br/> +{dex3}</StatsF>
+                            <StatsF onClick={()=> setValue3(D20(wis3))}>Wis <br/> +{wis3}</StatsF>
+                            <StatsF onClick={()=> setValue3(D20(con3))}>Con <br/> {con3}</StatsF>
                         </Stats>
                     </Info1> 
                 </Char3>
@@ -302,10 +314,10 @@ export default function Page(){
                         <Link to='/char3'><Button4 >?</Button4></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue4(D20(newLista[3].For))}>For <br/> +{newLista[3].For}</StatsF>
-                            <StatsF onClick={()=> setValue4(D20(newLista[3].Dex))}>Dex <br/> +{newLista[3].Dex}</StatsF>
-                            <StatsF onClick={()=> setValue4(D20(newLista[3].Wis))}>Wis <br/> +{newLista[3].Wis}</StatsF>
-                            <StatsF onClick={()=> setValue4(D20(newLista[3].Con))}>Con <br/> +{newLista[3].Con}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(forca4))}>For <br/> +{forca4}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(dex4))}>Dex <br/> +{dex4}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(wis4))}>Wis <br/> +{wis4}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(con4))}>Con <br/> +{con4}</StatsF>
                         </Stats>
                     </Info1>
                 </Char4>
@@ -315,10 +327,10 @@ export default function Page(){
                         <Link to='/char4'><Button5>?</Button5></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue5(D20(newLista[4].For))}>For <br/> {newLista[4].For}</StatsF>
-                            <StatsF onClick={()=> setValue5(D20(newLista[4].Dex))}>Dex <br/> +{newLista[4].Dex}</StatsF>
-                            <StatsF onClick={()=> setValue5(D20(newLista[4].Wis))}>Wis <br/> +{newLista[4].Wis}</StatsF>
-                            <StatsF onClick={()=> setValue5(D20(newLista[4].Con))}>Con <br/> {newLista[4].Con}</StatsF>
+                            <StatsF onClick={()=> setValue5(D20(forca5))}>For <br/> {forca5}</StatsF>
+                            <StatsF onClick={()=> setValue5(D20(dex5))}>Dex <br/> +{dex5}</StatsF>
+                            <StatsF onClick={()=> setValue5(D20(wis5))}>Wis <br/> +{wis5}</StatsF>
+                            <StatsF onClick={()=> setValue5(D20(con5))}>Con <br/> {con5}</StatsF>
                         </Stats>
                     </Info1>
                 </Char5>
@@ -328,10 +340,10 @@ export default function Page(){
                         <Link to='/char5'><Button6 >?</Button6></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue6(D20(newLista[5].For))}>For <br/> +{newLista[5].For}</StatsF>
-                            <StatsF onClick={()=> setValue6(D20(newLista[5].Dex))}>Dex <br/> +{newLista[5].Dex}</StatsF>
-                            <StatsF onClick={()=> setValue6(D20(newLista[5].Wis))}>Wis <br/> {newLista[5].Wis}</StatsF>
-                            <StatsF onClick={()=> setValue6(D20(newLista[5].Con))}>Con <br/> +{newLista[5].Con}</StatsF>
+                            <StatsF onClick={()=> setValue6(D20(forca6))}>For <br/> +{forca6}</StatsF>
+                            <StatsF onClick={()=> setValue6(D20(dex6))}>Dex <br/> +{dex6}</StatsF>
+                            <StatsF onClick={()=> setValue6(D20(wis6))}>Wis <br/> {wis6}</StatsF>
+                            <StatsF onClick={()=> setValue6(D20(con6))}>Con <br/> +{con6}</StatsF>
                         </Stats>
                     </Info1>
                 </Char6>
