@@ -217,10 +217,6 @@ const Part1 = styled.div`
 
 export default function Cruze(){
 
-    const [item, setItem] = useState('')
-    const [todos, setTodos] = useState([]);
-    
-
     const { forca4,dex4,wis4,con4,setForca4, setDex4, setWis4, setCon4} = useStates()
     
     return(

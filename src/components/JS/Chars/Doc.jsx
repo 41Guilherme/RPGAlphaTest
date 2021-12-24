@@ -217,15 +217,10 @@ const Part1 = styled.div`
 
 export default function Cruze(){
 
-    const [item, setItem] = useState('')
-    const [todos, setTodos] = useState([]);
-    
+
 
     const { forca3,dex3,wis3,con3,setForca3, setDex3, setWis3, setCon3} = useStates()
-    function deletar(lista){
-        lista.pop()
 
-    }
     return(
         <Fragment>
             <Title>

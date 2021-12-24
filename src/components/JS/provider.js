@@ -35,6 +35,13 @@ export const StatesProvider = ({children}) => {
     const [con5, setCon5] = useState(List[4].Con)
     const [con6, setCon6] = useState(List[5].Con)
 
+    const [value1, setValue1] = useState(100)
+    const [value2, setValue2] = useState(100)
+    const [value3, setValue3] = useState(100)
+    const [value4, setValue4] = useState(100)
+    const [value5, setValue5] = useState(100)
+    const [value6, setValue6] = useState(100)
+
     return(
         <StatesContext.Provider value={{
             forca1,forca2,forca3,forca4,forca5,forca6,
@@ -47,7 +54,10 @@ export const StatesProvider = ({children}) => {
             setWis1,setWis2,setWis3,setWis4,setWis5,setWis6,
             
             con1,con2,con3,con4,con5,con6,
-            setCon1,setCon2,setCon3,setCon4,setCon5,setCon6
+            setCon1,setCon2,setCon3,setCon4,setCon5,setCon6,
+
+            value1, value2, value3, value4, value5, value6,
+            setValue1, setValue2, setValue3, setValue4, setValue5, setValue6
         }}
         >
             {children}
