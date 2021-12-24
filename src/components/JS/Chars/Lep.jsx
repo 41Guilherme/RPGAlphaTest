@@ -235,10 +235,10 @@ export default function Cruze(){
             <Div>
                <FotoArea/>
                 <Stats>
-                    <Força><span>Força <hr/> +{forca2} <br/><button onClick={() => setForca2(forca2 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setForca2(forca2 - 1)} >-</button></span></Força>
-                    <Dex><span>Destreza <hr/> +{dex2}<br/><button onClick={() => setDex2(dex2 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setDex2(dex2 - 1)}>-</button></span></Dex>
+                    <Força><span>Força <hr/> {forca2} <br/><button onClick={() => setForca2(forca2 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setForca2(forca2 - 1)} >-</button></span></Força>
+                    <Dex><span>Destreza <hr/> {dex2}<br/><button onClick={() => setDex2(dex2 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setDex2(dex2 - 1)}>-</button></span></Dex>
                     <Wis><span>Sabedoria <hr/> {wis2} <br/><button onClick={() => setWis2(wis2 + 1)}>+</button> <span>&nbsp; &nbsp;</span>  <button onClick={() => setWis2(wis2 - 1)}>-</button></span></Wis>
-                    <Con><span>Constituição <hr/> +{con2} <br/> <button onClick={() => setCon2(con2 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setCon2(con2 - 1)}>-</button></span></Con>
+                    <Con><span>Constituição <hr/> {con2} <br/> <button onClick={() => setCon2(con2 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setCon2(con2 - 1)}>-</button></span></Con>
                 </Stats>
 
                 <Skills>

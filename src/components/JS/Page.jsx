@@ -275,10 +275,10 @@ export default function Page(){
                         <Link to='/char'><Button1>?</Button1></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue1(D20(forca1))}>For <br/> +{forca1}</StatsF>
-                            <StatsF onClick={() => setValue1(D20(dex1))}>Dex <br/> +{dex1}</StatsF>
+                            <StatsF onClick={()=> setValue1(D20(forca1))}>For <br/> {forca1}</StatsF>
+                            <StatsF onClick={() => setValue1(D20(dex1))}>Dex <br/> {dex1}</StatsF>
                             <StatsF onClick={() => setValue1(D20(wis1))}>Wis <br/> {wis1}</StatsF>
-                            <StatsF onClick={() => setValue1(D20(con1))}>Con <br/> +{con1}</StatsF>
+                            <StatsF onClick={() => setValue1(D20(con1))}>Con <br/> {con1}</StatsF>
                         </Stats>
                     </Info1>
                 </Char1>
@@ -288,10 +288,10 @@ export default function Page(){
                         <Link to='/char1'><Button2>?</Button2></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue2(D20(forca2))}>For <br/> +{forca2}</StatsF>
+                            <StatsF onClick={()=> setValue2(D20(forca2))}>For <br/> {forca2}</StatsF>
                             <StatsF onClick={()=> setValue2(D20(dex2))}>Dex <br/> {dex2}</StatsF>
                             <StatsF onClick={()=> setValue2(D20(wis2))}>Wis <br/> {wis2}</StatsF>
-                            <StatsF onClick={()=> setValue2(D20(con2))}>Con <br/> +{con2}</StatsF>
+                            <StatsF onClick={()=> setValue2(D20(con2))}>Con <br/> {con2}</StatsF>
                         </Stats>
                     </Info1>
                 </Char2>
@@ -302,8 +302,8 @@ export default function Page(){
                         </Name>
                         <Stats>
                             <StatsF onClick={()=> setValue3(D20(forca3))}>For <br/> {forca3}</StatsF>
-                            <StatsF onClick={()=> setValue3(D20(dex3))}>Dex <br/> +{dex3}</StatsF>
-                            <StatsF onClick={()=> setValue3(D20(wis3))}>Wis <br/> +{wis3}</StatsF>
+                            <StatsF onClick={()=> setValue3(D20(dex3))}>Dex <br/> {dex3}</StatsF>
+                            <StatsF onClick={()=> setValue3(D20(wis3))}>Wis <br/> {wis3}</StatsF>
                             <StatsF onClick={()=> setValue3(D20(con3))}>Con <br/> {con3}</StatsF>
                         </Stats>
                     </Info1> 
@@ -314,10 +314,10 @@ export default function Page(){
                         <Link to='/char3'><Button4 >?</Button4></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue4(D20(forca4))}>For <br/> +{forca4}</StatsF>
-                            <StatsF onClick={()=> setValue4(D20(dex4))}>Dex <br/> +{dex4}</StatsF>
-                            <StatsF onClick={()=> setValue4(D20(wis4))}>Wis <br/> +{wis4}</StatsF>
-                            <StatsF onClick={()=> setValue4(D20(con4))}>Con <br/> +{con4}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(forca4))}>For <br/> {forca4}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(dex4))}>Dex <br/> {dex4}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(wis4))}>Wis <br/> {wis4}</StatsF>
+                            <StatsF onClick={()=> setValue4(D20(con4))}>Con <br/> {con4}</StatsF>
                         </Stats>
                     </Info1>
                 </Char4>
@@ -328,8 +328,8 @@ export default function Page(){
                         </Name>
                         <Stats>
                             <StatsF onClick={()=> setValue5(D20(forca5))}>For <br/> {forca5}</StatsF>
-                            <StatsF onClick={()=> setValue5(D20(dex5))}>Dex <br/> +{dex5}</StatsF>
-                            <StatsF onClick={()=> setValue5(D20(wis5))}>Wis <br/> +{wis5}</StatsF>
+                            <StatsF onClick={()=> setValue5(D20(dex5))}>Dex <br/> {dex5}</StatsF>
+                            <StatsF onClick={()=> setValue5(D20(wis5))}>Wis <br/> {wis5}</StatsF>
                             <StatsF onClick={()=> setValue5(D20(con5))}>Con <br/> {con5}</StatsF>
                         </Stats>
                     </Info1>
@@ -340,10 +340,10 @@ export default function Page(){
                         <Link to='/char5'><Button6 >?</Button6></Link>
                         </Name>
                         <Stats>
-                            <StatsF onClick={()=> setValue6(D20(forca6))}>For <br/> +{forca6}</StatsF>
-                            <StatsF onClick={()=> setValue6(D20(dex6))}>Dex <br/> +{dex6}</StatsF>
+                            <StatsF onClick={()=> setValue6(D20(forca6))}>For <br/> {forca6}</StatsF>
+                            <StatsF onClick={()=> setValue6(D20(dex6))}>Dex <br/> {dex6}</StatsF>
                             <StatsF onClick={()=> setValue6(D20(wis6))}>Wis <br/> {wis6}</StatsF>
-                            <StatsF onClick={()=> setValue6(D20(con6))}>Con <br/> +{con6}</StatsF>
+                            <StatsF onClick={()=> setValue6(D20(con6))}>Con <br/> {con6}</StatsF>
                         </Stats>
                     </Info1>
                 </Char6>

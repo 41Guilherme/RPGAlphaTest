@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import styled from "styled-components";
 import {Title, Button} from '../../styles/styled'
 import { Link } from "react-router-dom";
-import c1 from '../../images/C1.png';
+import c1 from '../../images/C5.png';
 import { useStates } from "../provider";
 
 const Div = styled.div`
@@ -23,7 +23,7 @@ const Div = styled.div`
 `
 const FotoArea = styled.div`
     background: url(${c1})no-repeat ;
-    background-color: #910c0c;
+    background-color: #8B0000;
     padding: 10px;
     width: 45%;
     height: 280px;
@@ -42,7 +42,7 @@ const Stats = styled.div`
     border-top-right-radius: 25px;
     margin-bottom: 0;
     button{
-        background-color: yellow;
+        background-color: #8B0000;
         border-radius: 20rem;
         font-size: 1.5rem;
     }
@@ -67,7 +67,7 @@ const Força = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #8B0000;
     }
     button{
         margin-top: 2px;
@@ -94,7 +94,7 @@ const Dex = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #8B0000;
     }
     button{
         margin-top: 2px;
@@ -121,7 +121,7 @@ const Wis = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #8B0000;
     }
     button{
         margin-top: 2px;
@@ -148,7 +148,7 @@ const Con = styled.div`
         font-size: 1.2rem;
         background-color: #000; 
         border-radius: 10px;
-        color: yellow;
+        color: #8B0000;
     }
     button{
         margin-top: 2px;
@@ -172,7 +172,7 @@ const Part1 = styled.div`
     justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
-    color: yellow;
+    color: #8B0000;
     h1{
         background-color: #000;
         border: solid 2px #000;
@@ -221,11 +221,8 @@ export default function Cruze(){
     const [todos, setTodos] = useState([]);
     
 
-    const { forca1,dex1,wis1,con1,setForca1, setDex1, setWis1, setCon1} = useStates()
-    function deletar(lista){
-        lista.pop()
-
-    }
+    const { forca5,dex5,wis5,con5,setForca5, setDex5, setWis5, setCon5} = useStates()
+    
     return(
         <Fragment>
             <Title>
@@ -238,10 +235,10 @@ export default function Cruze(){
             <Div>
                <FotoArea/>
                 <Stats>
-                    <Força><span>Força <hr/> +{forca1} <br/><button onClick={() => setForca1(forca1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setForca1(forca1 - 1)} >-</button></span></Força>
-                    <Dex><span>Destreza <hr/> +{dex1}<br/><button onClick={() => setDex1(dex1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setDex1(dex1 - 1)}>-</button></span></Dex>
-                    <Wis><span>Sabedoria <hr/> {wis1} <br/><button onClick={() => setWis1(wis1 + 1)}>+</button> <span>&nbsp; &nbsp;</span>  <button onClick={() => setWis1(wis1 - 1)}>-</button></span></Wis>
-                    <Con><span>Constituição <hr/> +{con1} <br/> <button onClick={() => setCon1(con1 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setCon1(con1 - 1)}>-</button></span></Con>
+                    <Força><span>Força <hr/> {forca5} <br/><button onClick={() => setForca5(forca5 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setForca5(forca5 - 1)} >-</button></span></Força>
+                    <Dex><span>Destreza <hr/> {dex5}<br/><button onClick={() => setDex5(dex5 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setDex5(dex5 - 1)}>-</button></span></Dex>
+                    <Wis><span>Sabedoria <hr/> {wis5} <br/><button onClick={() => setWis5(wis5 + 1)}>+</button> <span>&nbsp; &nbsp;</span>  <button onClick={() => setWis5(wis5 - 1)}>-</button></span></Wis>
+                    <Con><span>Constituição <hr/> {con5} <br/> <button onClick={() => setCon5(con5 + 1)}>+</button> <span>&nbsp; &nbsp;</span> <button onClick={() => setCon5(con5 - 1)}>-</button></span></Con>
                 </Stats>
 
                 <Skills>
@@ -249,37 +246,36 @@ export default function Cruze(){
                         <h1>Skills</h1>
                         <header></header>
                         <div>
-                
-                            FÉ DE BATALHA
-                            <p>Crita com 18 e 19 e ao realizar Ataques Criticos se Cura</p>
+                            DILACERAR
+                            <p>Todos os ataques causam 1 stack de sangramento</p>
                         </div>
                         <div>
-                            CORTE SEQUENCIAL
-                            <p>Ao matar inimigos ganha um novo turno</p>
+                            BARDO NATO
+                            <p>Pode imitar sons e vozes com seu alaude e sua musica alivia crises de sanidade</p>
                         </div>
                         <div>
-                            MÃOS PESADAS
-                            <p>Seus ataques atordoam alvos com pouca vida</p>
+                            ATLETA CIRCENSE
+                            <p>Pode jogar até 2 vezes suas tentativas de esquiva</p>
                         </div>
                         <div>
-                            "FAZ O URRO"
-                            <p>Um grito que buffa aliados e nerfa inimigos</p>
+                            SANGUINARIO
+                            <p>Acumular 3 stacks em um inimigo garante uma execução imediata</p>
                         </div>
                     </Part1>
                     <Part1>
                         <h1>Inventário</h1>
                         <header></header>
                         <div>
-                            ESPADA DE AÇO
+                            FOICE E ADAGA
                         </div>
                         <div>
-                            LANÇA DE BATALHA
+                            ALAUDE
                         </div>
                         <div>
-                            ARMADURA DE PLACAS
+                            TRAJE DE BOBO DA CORTE
                         </div>
                         <div>
-                            CAPACETE DE CRUZADO
+                            MASCARA SEM FACE
                         </div>
                     </Part1>
                 </Skills>

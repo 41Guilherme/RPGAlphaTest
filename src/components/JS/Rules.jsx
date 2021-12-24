@@ -33,7 +33,7 @@ export default function Rules(){
                 <Link to="/map"><Button>MAPS</Button></Link> 
             </Title>
             <Div>
-                <h1>Regras do Jogo</h1> 
+                <h1>SITUAÇÃO DA PARTY</h1> 
                
             </Div>
 
