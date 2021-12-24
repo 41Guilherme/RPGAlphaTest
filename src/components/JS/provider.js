@@ -35,11 +35,11 @@ export const StatesProvider = ({children}) => {
     const [con5, setCon5] = useState(List[4].Con)
     const [con6, setCon6] = useState(List[5].Con)
 
-    const [value1, setValue1] = useState(100)
-    const [value2, setValue2] = useState(100)
-    const [value3, setValue3] = useState(100)
+    const [value1, setValue1] = useState(110)
+    const [value2, setValue2] = useState(130)
+    const [value3, setValue3] = useState(90)
     const [value4, setValue4] = useState(100)
-    const [value5, setValue5] = useState(100)
+    const [value5, setValue5] = useState(90)
     const [value6, setValue6] = useState(100)
 
     return(

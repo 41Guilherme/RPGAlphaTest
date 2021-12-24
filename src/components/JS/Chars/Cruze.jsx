@@ -264,15 +264,19 @@ export default function Cruze(){
                         <header></header>
                         <div>
                             ESPADA DE AÇO
+                            <p>D8 + 4 de Dano</p>
                         </div>
                         <div>
                             LANÇA DE BATALHA
+                            <p>D12 + 1 de Dano</p>
                         </div>
                         <div>
                             ARMADURA DE PLACAS
+                            <p>D8 + D4 de Armor</p>
                         </div>
                         <div>
                             CAPACETE DE CRUZADO
+                            <p>Imune a Decapitação</p>
                         </div>
                     </Part1>
                 </Skills>

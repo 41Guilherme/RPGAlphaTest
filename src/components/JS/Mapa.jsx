@@ -3,7 +3,6 @@ import { Fragment } from "react";
 import styled from "styled-components";
 import {Title, Button} from '../styles/styled'
 import { Link } from "react-router-dom";
-import logo from '../images/Mapa.png'
 
 const Div = styled.div`
         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfcu4kpkjo3wlvpfFZB06yvvEA2riYgW4Vw&usqp=CAU') ;
@@ -19,6 +18,8 @@ const Div = styled.div`
         flex-direction: column;
         text-align: center;
 `
+
+
 
 export default function Mapa(){
     return(
