@@ -199,8 +199,8 @@ export default function Rules(){
                 <Link to="/"><Button>HOME</Button></Link> 
                 <Button>CLEAR</Button>
                 <i>RPG BOARD GAME</i>
-                <Link to="/rules"><Button>RULES</Button></Link> 
-                <Link to="/map"><Button>MAPS</Button></Link> 
+                <Link to="/rules"><Button>HP CHAR</Button></Link> 
+                <Link to="/map"><Button>ITENS</Button></Link> 
             </Title>
             <Div>
                 
