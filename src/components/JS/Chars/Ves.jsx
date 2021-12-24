@@ -74,6 +74,10 @@ const Força = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Dex = styled.div`
     display:flex;
@@ -100,6 +104,10 @@ const Dex = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Wis = styled.div`
@@ -128,6 +136,10 @@ const Wis = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Con = styled.div`
     display:flex;
@@ -154,6 +166,10 @@ const Con = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Skills = styled.div`
@@ -264,15 +280,19 @@ export default function Cruze(){
                         <header></header>
                         <div>
                             CLAVA DE AÇO
+                            <p>D10 + 4 de Dano </p>
                         </div>
                         <div>
                             GRIMORIO SAGRADO
+                            <p>Possibilita o uso de Magia</p>
                         </div>
                         <div>
                             TUNICA CLÉRIGA
+                            <p> D4 + 2 de Armor</p>
                         </div>
                         <div>
                             ANEL DA LUZ DIVINA
+                            <p>Ilumina locais sem conjuração</p>
                         </div>
                     </Part1>
                 </Skills>

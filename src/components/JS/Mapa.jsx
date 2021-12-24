@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Title, Button} from '../styles/styled'
 import { Link } from "react-router-dom";
 
+
 const Div = styled.div`
         background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfcu4kpkjo3wlvpfFZB06yvvEA2riYgW4Vw&usqp=CAU') ;
         width: 45rem;
@@ -32,6 +33,7 @@ export default function Mapa(){
                 <Link to="/map"><Button>ITENS</Button></Link> 
             </Title>
             <Div>
+
 
             </Div>
 

@@ -63,16 +63,16 @@ export default function Rolar(){
     return(
         <Fragment>
             <Div>
-                <Button onClick={()=> setValue(D20(0))}>D20</Button>
-                <Button onClick={()=> setValue(D12(0))}>D12</Button>
-                <Button onClick={()=> setValue(D10(0))}>D10</Button>
+                <Button onClick={()=> setValue(value + D20(0))}>D20</Button>
+                <Button onClick={()=> setValue(value + D12(0))}>D12</Button>
+                <Button onClick={()=> setValue(value + D10(0))}>D10</Button>
                     <span>
                         <input value={value}/>
                         <Button1 onClick={() => setValue(0)}>X</Button1>
                     </span>
-                <Button onClick={()=> setValue(D8(0))}>D8</Button>
-                <Button onClick={()=> setValue(D6(0))}>D6</Button>
-                <Button onClick={()=> setValue(D4(0))}>D4</Button>
+                <Button onClick={()=> setValue(value + D8(0))}>D8</Button>
+                <Button onClick={()=> setValue(value + D6(0))}>D6</Button>
+                <Button onClick={()=> setValue(value + D4(0))}>D4</Button>
             </Div>
         </Fragment>
     );

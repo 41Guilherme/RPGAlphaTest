@@ -74,6 +74,10 @@ const Força = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Dex = styled.div`
     display:flex;
@@ -100,6 +104,10 @@ const Dex = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Wis = styled.div`
@@ -128,6 +136,10 @@ const Wis = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Con = styled.div`
     display:flex;
@@ -154,6 +166,10 @@ const Con = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Skills = styled.div`
@@ -264,20 +280,22 @@ export default function Cruze(){
                         <header></header>
                         <div>
                             FOICE E ADAGA
+                            <p>D12 + D6 + 2 de Dano</p>
                         </div>
                         <div>
                             ALAUDE
+                            <p>Instrumento Musical</p>
                         </div>
                         <div>
                             TRAJE DE BOBO DA CORTE
+                            <p>Leve Movimentação e Grande Carisma</p>
                         </div>
                         <div>
                             MASCARA SEM FACE
+                            <p>Imune a Head Shots</p>
                         </div>
                     </Part1>
-                </Skills>
-               
-               
+                </Skills>   
             </Div>
 
         </Fragment>

@@ -237,7 +237,7 @@ export default function Page(){
     const [value4, setValue4] = useState(0);
     const [value5, setValue5] = useState(0);
     const [value6, setValue6] = useState(0);
-    const newLista = Lista
+    
 
     const { 
         forca1,forca2,forca3,forca4,forca5,forca6,

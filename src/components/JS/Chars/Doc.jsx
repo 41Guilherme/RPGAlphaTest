@@ -74,6 +74,10 @@ const Força = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Dex = styled.div`
     display:flex;
@@ -100,6 +104,10 @@ const Dex = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Wis = styled.div`
@@ -128,6 +136,10 @@ const Wis = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Con = styled.div`
     display:flex;
@@ -154,6 +166,10 @@ const Con = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Skills = styled.div`
@@ -246,10 +262,10 @@ export default function Cruze(){
                         <div>
                 
                             SOBREVIVENTE
-                            <p>Sua Insanidade aumenta muito lentamente e é imune a peste</p>
+                            <p>Sua Insanidade aumenta muito lentamente</p>
                         </div>
                         <div>
-                            CORTE ENVENENADO
+                            ENVENENADOR
                             <p>Ataques com laminas aplicam veneno de dano gradual</p>
                         </div>
                         <div>
@@ -266,16 +282,19 @@ export default function Cruze(){
                         <header></header>
                         <div>
                             ADAGA DE AÇO
+                            <p>3x D6 de Dano</p>
                         </div>
                         <div>
                             BOMBAS
-                            <p>Veneno, Polvora e Fumaça </p>
+                            <p>Veneno, Polvora(D20) e Fumaça </p>
                         </div>
                         <div>
                             MANTO DA PESTE NEGRA
+                            <p>Imune a Doenças</p>
                         </div>
                         <div>
                             DARDOS DE ARREMESSO
+                            <p>D8 de Dano</p>
                         </div>
                     </Part1>
                 </Skills>

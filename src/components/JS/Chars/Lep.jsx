@@ -47,6 +47,7 @@ const Stats = styled.div`
         font-size: 1.5rem;
     }
     
+    
 `
 const Força = styled.div`
     display:flex;
@@ -73,6 +74,10 @@ const Força = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Dex = styled.div`
@@ -101,6 +106,10 @@ const Dex = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Wis = styled.div`
     display:flex;
@@ -128,6 +137,10 @@ const Wis = styled.div`
         width: 35px;
         border-radius: 5px;
     }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
 `
 const Con = styled.div`
     display:flex;
@@ -154,6 +167,10 @@ const Con = styled.div`
         margin-top: 2px;
         width: 35px;
         border-radius: 5px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
     }
 `
 const Skills = styled.div`
