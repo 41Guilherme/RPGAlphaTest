@@ -243,7 +243,7 @@ export default function Cruze(){
                 <Button>CLEAR</Button>
                 <i>RPG BOARD GAME</i>
                 <Link to="/rules"><Button>HP CHAR</Button></Link> 
-                <Link to="/map"><Button>ITENSS</Button></Link> 
+                <Link to="/map"><Button>STATSS</Button></Link> 
             </Title>
             <Div>
                <FotoArea/>

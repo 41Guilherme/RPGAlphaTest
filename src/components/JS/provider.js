@@ -42,6 +42,8 @@ export const StatesProvider = ({children}) => {
     const [value5, setValue5] = useState(90)
     const [value6, setValue6] = useState(100)
 
+    const [insan1 , setInsan1] = useState(0)
+
     return(
         <StatesContext.Provider value={{
             forca1,forca2,forca3,forca4,forca5,forca6,
