@@ -215,8 +215,8 @@ const Stats = styled.div`
     button:hover{
         transform: scale(1.1);
         transition: all 0.5s;
-        color: #1c0853;
-        border-color: #1c0853;
+        color: red;
+        border-color: red;
     }
 `
 const StatsF =styled.button`
