@@ -279,15 +279,19 @@ export default function Cruze(){
                         <header></header>
                         <div>
                             PISTOLAS GEMEAS
+                            <p>2x D12 + 2</p> 
                         </div>
                         <div>
                             LAMINA DE ASSASSINO
+                            <p>D8 + 4</p>
                         </div>
                         <div>
                             MANTO NEGRO
+                            <p>Uma esquiva garantida por batalha</p>
                         </div>
                         <div>
                             ADAGAS DE ARREMESSO
+                            <p>3x D6</p>
                         </div>
                     </Part1>
                 </Skills>
