@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import styled from "styled-components";
 import {Title, Button} from '../styles/styled'
 import { Link } from "react-router-dom";
+import { useStates } from "./provider";
 
 
 const Div = styled.div`
@@ -18,7 +19,7 @@ const Div = styled.div`
         flex-wrap: wrap;
         flex-direction: column;
         text-align: center;
-
+        
         header{
             padding: 5px;
             background: #fff;
@@ -51,9 +52,13 @@ const Div = styled.div`
             justify-content: flex-start;
             font-weight: 700;
             gap: 25px;
+            color: #ccc;
         }
         button{
-            border-radius: 25px;
+            border-radius: 50px;
+        }
+        input{
+            width: 100px;
         }
 
 `
@@ -61,7 +66,24 @@ const Div = styled.div`
 
 
 export default function Mapa(){
+    const {
+        insan1 , setInsan1,
+        insan2 , setInsan2,
+        insan3 , setInsan3,
+        insan4 , setInsan4,
+        insan5 , setInsan5,
+        insan6 , setInsan6,
+    
+        enfen1, setEnfen1,
+        enfen2, setEnfen2,
+        enfen3, setEnfen3,
+        enfen4, setEnfen4,
+        enfen5, setEnfen5,
+        enfen6, setEnfen6} = useStates()
+
+
     return(
+
         <Fragment>
             <Title>
                 <Link to="/"><Button>HOME</Button></Link> 
@@ -76,13 +98,13 @@ export default function Mapa(){
                     <hr/>
                     <div>
                         
-                        <span> INSANIDADE: 100  <button>+</button> <button>-</button> </span>
-                        <span> ENFERMIDADE: 100 <button>+</button> <button>-</button> </span>
+                        <span> INSANIDADE: {insan1}  <button onClick={() => setInsan1(insan1 + 5)}>+</button> <button onClick={() => setInsan1(insan1 - 5)}>-</button> </span>
+                        <span> ENFERMIDADE: {enfen1} <button  onClick={() => setEnfen1(enfen1 + 5)}>+</button> <button  onClick={() => setEnfen1(enfen1 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas</summary>
-                                
+                                <summary>Lista de Sequelas <input/></summary>
                             </details> 
+                            
                         </span>
                     </div>
                 </header>
@@ -91,11 +113,11 @@ export default function Mapa(){
                     <hr/>
                     <div>
                         
-                        <span> INSANIDADE: 100  <button>+</button> <button>-</button> </span>
-                        <span> ENFERMIDADE: 100 <button>+</button> <button>-</button> </span>
+                        <span> INSANIDADE: {insan2}  <button onClick={() => setInsan2(insan2 + 5)}>+</button> <button onClick={() => setInsan2(insan2 - 5)}>-</button> </span>
+                        <span> ENFERMIDADE: {enfen2}  <button  onClick={() => setEnfen2(enfen2 + 5)}>+</button> <button  onClick={() => setEnfen2(enfen2 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas</summary>
+                                <summary>Lista de Sequelas <input/></summary>
                                 
                             </details> 
                         </span>
@@ -106,11 +128,11 @@ export default function Mapa(){
                     <hr/>
                     <div>
                         
-                        <span> INSANIDADE: 100  <button>+</button> <button>-</button> </span>
-                        <span> ENFERMIDADE: 100 <button>+</button> <button>-</button> </span>
+                        <span> INSANIDADE: {insan3}  <button onClick={() => setInsan3(insan3 + 5)}>+</button> <button onClick={() => setInsan3(insan3 - 5)}>-</button> </span>
+                        <span> ENFERMIDADE: {enfen3}  <button  onClick={() => setEnfen3(enfen3 + 5)}>+</button> <button  onClick={() => setEnfen3(enfen3 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas</summary>
+                                <summary>Lista de Sequelas <input/></summary>
                                 
                             </details> 
                         </span>
@@ -122,11 +144,11 @@ export default function Mapa(){
                     <hr/>
                     <div>
                         
-                        <span> INSANIDADE: 100  <button>+</button> <button>-</button> </span>
-                        <span> ENFERMIDADE: 100 <button>+</button> <button>-</button> </span>
+                        <span> INSANIDADE: {insan4}  <button onClick={() => setInsan4(insan4 + 5)}>+</button> <button onClick={() => setInsan4(insan4 - 5)}>-</button> </span>
+                        <span> ENFERMIDADE: {enfen4}  <button  onClick={() => setEnfen4(enfen4 + 5)}>+</button> <button  onClick={() => setEnfen4(enfen4 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas</summary>
+                                <summary>Lista de Sequelas <input/></summary>
                                 
                             </details> 
                         </span>
@@ -136,11 +158,11 @@ export default function Mapa(){
                     <h2>Jester</h2>
                     <hr/>
                     <div>
-                        <span> INSANIDADE: 100  <button>+</button> <button>-</button> </span>
-                        <span> ENFERMIDADE: 100 <button>+</button> <button>-</button> </span>
+                        <span> INSANIDADE: {insan5}  <button onClick={() => setInsan5(insan5 + 5)}>+</button> <button onClick={() => setInsan5(insan5 - 5)}>-</button> </span>
+                        <span> ENFERMIDADE: {enfen5}  <button  onClick={() => setEnfen5(enfen5 + 5)}>+</button> <button  onClick={() => setEnfen5(enfen5 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas</summary>
+                                <summary>Lista de Sequelas <input/></summary>
                                 
                             </details> 
                         </span>
@@ -151,11 +173,11 @@ export default function Mapa(){
                     <hr/>
                     <div>
                         
-                        <span> INSANIDADE: 100  <button>+</button> <button>-</button> </span>
-                        <span> ENFERMIDADE: 100 <button>+</button> <button>-</button> </span>
+                        <span> INSANIDADE: {insan6}  <button onClick={() => setInsan6(insan6 + 5)}>+</button> <button onClick={() => setInsan6(insan6 - 5)}>-</button> </span>
+                        <span> ENFERMIDADE: {enfen6}  <button  onClick={() => setEnfen6(enfen6 + 5)}>+</button> <button  onClick={() => setEnfen6(enfen6 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas</summary>
+                                <summary>Lista de Sequelas <input/></summary>
                                 
                             </details> 
                         </span>

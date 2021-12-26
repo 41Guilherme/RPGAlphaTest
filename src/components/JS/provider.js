@@ -42,7 +42,19 @@ export const StatesProvider = ({children}) => {
     const [value5, setValue5] = useState(90)
     const [value6, setValue6] = useState(100)
 
-    const [insan1 , setInsan1] = useState(0)
+    const [insan1 , setInsan1] = useState(100)
+    const [insan2 , setInsan2] = useState(100)
+    const [insan3 , setInsan3] = useState(100)
+    const [insan4 , setInsan4] = useState(100)
+    const [insan5 , setInsan5] = useState(100)
+    const [insan6 , setInsan6] = useState(100)
+
+    const [enfen1 , setEnfen1] = useState(100)
+    const [enfen2 , setEnfen2] = useState(100)
+    const [enfen3 , setEnfen3] = useState(100)
+    const [enfen4 , setEnfen4] = useState(100)
+    const [enfen5 , setEnfen5] = useState(100)
+    const [enfen6 , setEnfen6] = useState(100)
 
     return(
         <StatesContext.Provider value={{
@@ -59,7 +71,21 @@ export const StatesProvider = ({children}) => {
             setCon1,setCon2,setCon3,setCon4,setCon5,setCon6,
 
             value1, value2, value3, value4, value5, value6,
-            setValue1, setValue2, setValue3, setValue4, setValue5, setValue6
+            setValue1, setValue2, setValue3, setValue4, setValue5, setValue6,
+
+            insan1 , setInsan1,
+            insan2 , setInsan2,
+            insan3 , setInsan3,
+            insan4 , setInsan4,
+            insan5 , setInsan5,
+            insan6 , setInsan6,
+        
+            enfen1, setEnfen1,
+            enfen2, setEnfen2,
+            enfen3, setEnfen3,
+            enfen4, setEnfen4,
+            enfen5, setEnfen5,
+            enfen6, setEnfen6            
         }}
         >
             {children}
