@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fragment } from "react";
 import styled from "styled-components";
 import {Title, Button} from '../styles/styled'
@@ -59,6 +59,7 @@ const Div = styled.div`
         }
         input{
             width: 100px;
+            margin-right: 0;
         }
 
 `
@@ -81,7 +82,14 @@ export default function Mapa(){
         enfen5, setEnfen5,
         enfen6, setEnfen6} = useStates()
 
+    const [info1 , setInfo1] = useState('')
+    const [list1, setList1] = useState('')
 
+    // function send(){
+    //     let arr = list1
+    //     arr.push(info1)
+    //     setList1(arr)
+    // }
     return(
 
         <Fragment>
@@ -102,7 +110,8 @@ export default function Mapa(){
                         <span> ENFERMIDADE: {enfen1} <button  onClick={() => setEnfen1(enfen1 + 5)}>+</button> <button  onClick={() => setEnfen1(enfen1 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas <input/></summary>
+                                <summary>Lista de Sequelas <input onChange={(e) => setInfo1(e.target.value)} /><button onClick={() => setList1(info1)}>&rarr;</button></summary>
+                                <p>{list1}</p>
                             </details> 
                             
                         </span>

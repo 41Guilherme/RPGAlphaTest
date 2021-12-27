@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { Fragment } from "react";
 import styled from "styled-components";
 import {Title, Button} from '../../styles/styled'
-import { Link } from "react-router-dom";
+import { Link , useHistory } from "react-router-dom";
 import c1 from '../../images/C1.png';
 import { useStates } from "../provider";
+import { useSkills } from "../skillprovider";
 
 const Div = styled.div`
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfcu4kpkjo3wlvpfFZB06yvvEA2riYgW4Vw&usqp=CAU') ;
@@ -197,6 +198,19 @@ const Part1 = styled.div`
         position: absolute;
         justify-content: center;
         margin-bottom: 0;
+        text-align: center;
+        button{
+            position: absolute;
+            margin-left: 112px;
+            background: #708090;
+           
+            
+        }
+        .b2{
+            position: absolute;
+            margin-left: 78px;
+            background: #708090;
+        }
     }
     div{
         background-color: white;
@@ -226,6 +240,14 @@ const Part1 = styled.div`
         height: 50px;
         border-radius: 20px;
     }
+    article{
+        margin-top: 5.5rem;
+    }
+    select{
+        width: 200px;
+        height: 2.5rem;
+        margin-bottom: 2rem;
+    }
 `
 
 
@@ -234,7 +256,10 @@ const Part1 = styled.div`
 export default function Cruze(){
 
     const { forca1,dex1,wis1,con1,setForca1, setDex1, setWis1, setCon1} = useStates()
+    const  [Inv, setInv] = useState(true)
+    const  [Ski, setSki] = useState(true)
 
+    const {C1, C2, C3, C4, C5, C6, C7, C8 ,setC1} = useSkills()
     return(
         <Fragment>
             <Title>
@@ -255,45 +280,86 @@ export default function Cruze(){
 
                 <Skills>
                     <Part1>
-                        <h1>Skills</h1>
-                        <header></header>
-                        <div>
-                
-                            FÉ DE BATALHA
-                            <p>Crita com 18 e 19 e ao realizar Ataques Criticos se Cura</p>
-                        </div>
-                        <div>
-                            CORTE SEQUENCIAL
-                            <p>Ao matar inimigos ganha um novo turno</p>
-                        </div>
-                        <div>
-                            MÃOS PESADAS
-                            <p>Seus ataques atordoam alvos com pouca vida</p>
-                        </div>
-                        <div>
-                            "FAZ O URRO"
-                            <p>Um grito que buffa aliados e nerfa inimigos</p>
-                        </div>
+                        <h1>Skills  <button onClick={()=> setSki(!Ski)} >?</button></h1>
+                        {Ski == true ? <Fragment>
+                            <header></header>
+                            <div>
+                                {C1[0]}
+                                <p>{C1[1]}</p>
+                            </div>
+                            <div>
+                                {C2[0]}
+                                <p>{C2[1]}</p>
+                            </div>
+                            <div>
+                                {C3[0]}
+                                <p>{C3[1]}</p>
+                            </div>
+                            <div>
+                                {C4[0]}
+                                <p>{C4[1]}</p>
+                            </div>
+                        </Fragment> 
+                        : 
+                        <Fragment>
+                            <article>
+                                <select>
+                                    <option>1 SKILL</option>
+                                </select>
+                                <select>
+                                    <option>2 SKILL</option>
+                                </select>
+                                <select> 
+                                    <option>3 SKILL</option>
+                                </select>
+                                <select>
+                                    <option>4 SKILL</option>
+                                </select>
+                            </article>
+                        </Fragment>}
+                        
                     </Part1>
                     <Part1>
-                        <h1>Inventário</h1>
-                        <header></header>
-                        <div>
-                            ESPADA DE AÇO
-                            <p>D8 + 4 de Dano</p>
-                        </div>
-                        <div>
-                            LANÇA DE BATALHA
-                            <p>D12 + 1 de Dano</p>
-                        </div>
-                        <div>
-                            ARMADURA DE PLACAS
-                            <p>D8 + D4 de Armor</p>
-                        </div>
-                        <div>
-                            CAPACETE DE CRUZADO
-                            <p>Imune a Decapitação</p>
-                        </div>
+                        <h1>Inventário <button className="b2" onClick={() => setInv(!Inv)}>?</button></h1>
+                        {Inv == true ? 
+                        <Fragment>
+                            <header></header>
+                            <div>
+                                ESPADA DE AÇO
+                                <p>D8 + 4 de Dano</p>
+                            </div>
+                            <div>
+                                LANÇA DE BATALHA
+                                <p>D12 + 1 de Dano</p>
+                            </div>
+                            <div>
+                                ARMADURA DE PLACAS
+                                <p>D8 + D4 de Armor</p>
+                            </div>
+                            <div>
+                                CAPACETE DE CRUZADO
+                                <p>Imune a Decapitação</p>
+                            </div> 
+                        </Fragment>: 
+                        
+                        <Fragment>
+                            <article>
+                                <select>
+                                    <option>1.1 ITEM</option>
+                                    <option>1.2 ITEM</option>
+                                </select>
+                                <select>
+                                    <option>2 ITEM</option>
+                                </select>
+                                <select> 
+                                    <option>3 ITEM</option>
+                                </select>
+                                <select>
+                                    <option>4 ITEM</option>
+                                </select>
+                            </article>
+                        </Fragment>}
+                        
                     </Part1>
                 </Skills>
                
