@@ -7,7 +7,7 @@ import { useStates } from "./provider";
 
 
 const Div = styled.div`
-        background: url('https://media.istockphoto.com/photos/stone-wall-background-picture-id1000098722?k=20&m=1000098722&s=170667a&w=0&h=eC-v5ERg0vizV5r-VGUSSEIE8Isa1-MwCPqAXKILz78=') ;
+        background: #333131 ;
         width: 45rem;
         height: 50rem;
         margin-top: 0.8rem;
@@ -110,7 +110,7 @@ export default function Mapa(){
                         <span> ENFERMIDADE: {enfen1} <button  onClick={() => setEnfen1(enfen1 + 5)}>+</button> <button  onClick={() => setEnfen1(enfen1 - 5)} >-</button> </span>
                         <span> 
                             <details> 
-                                <summary>Lista de Sequelas <input onChange={(e) => setInfo1(e.target.value)} /><button onClick={() => setList1(info1)}>&rarr;</button></summary>
+                                <summary>Lista de Sequelas <input onChange={(e) => setInfo1(e.target.value)} /></summary>
                                 <p>{list1}</p>
                             </details> 
                             

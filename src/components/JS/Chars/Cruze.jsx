@@ -6,6 +6,7 @@ import { Link , useHistory } from "react-router-dom";
 import c1 from '../../images/C1.png';
 import { useStates } from "../provider";
 import { useSkills } from "../skillprovider";
+import Select from "react-select";
 
 const Div = styled.div`
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfcu4kpkjo3wlvpfFZB06yvvEA2riYgW4Vw&usqp=CAU') ;
@@ -242,15 +243,17 @@ const Part1 = styled.div`
     }
     article{
         margin-top: 5.5rem;
+        
     }
     select{
-        width: 200px;
-        height: 2.5rem;
-        margin-bottom: 2rem;
+        width: 20rem;
+        height: 2.4rem;
+        margin-bottom: 35px;
+        color: #910c0c;
+        
     }
+   
 `
-
-
 
 
 export default function Cruze(){
@@ -259,7 +262,88 @@ export default function Cruze(){
     const  [Inv, setInv] = useState(true)
     const  [Ski, setSki] = useState(true)
 
-    const {C1, C2, C3, C4, C5, C6, C7, C8 ,setC1} = useSkills()
+    const {C1, C2, C3, C4, C5, C6, C7, C8 ,setC5, setC1, setC2, setC3, setC4, setC6, setC7, setC8} = useSkills()
+    
+    function handleChange1(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC1(["FÉ DE BATALHA", "Crita com 18 e 19 e ao realizar Ataques Criticos se Cura"])
+        }else if (valor == 2){
+            setC1(["VETERANO DE GUERRA", "Encontra um ponto critico de um inimigo"])
+        }else{
+            setC1(["CONTRA-GOLPEADOR", "Ao ser atacado ganha um turno de ataque"])
+        }
+    }
+    function handleChange2(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC2(["CORTE SEQUENCIAL","Ao matar inimigos ganha um novo turno"])
+        }else if (valor == 2){
+            setC2(["MULTILADOR", "Ataques críticos arracam pedaços de inimigos"])
+        }else{
+            setC2(["ARREMESSO PESADO", "Pode arremssar armas pesados usando Força"])
+        }
+    }
+    function handleChange3(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC3(["MÃOS PESADAS", "Seus ataques atordoam alvos com pouca vida"])
+        }else if (valor == 2){
+            setC3(["ESQUIVA PESADA", "Pode usar como bônus de esquiva o stat força"])
+        }else{
+            setC3(["ESCUDEIRO NATO", "Usar escudo aumenta o dano"])
+        }
+    }
+    function handleChange4(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC4(['"FAZ O URRO"',"Um grito que buffa aliados e nerfa inimigos"])
+        }else if (valor == 2){
+            setC4(["MISERICORDIOSO", "Inimigos com pouca vida pode ser executados"])
+        }else{
+            setC4(["ULTIMO HOMEM", "Ao tomar um dano fatal, ganha 20 de vida e um crítico"])
+        }
+    }
+    function handleChange5(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC5(["ESPADA DE AÇO", "D8 + 4 de Dano"])
+        }else if (valor == 2){
+            setC5(["MACHADO DE BATALHA", "D10 + 2 de Dano"])
+        }else{
+            setC5(["CIMITARRA DE BRONZE", "D6 + D6 + 1 de Dano"])
+        }
+    }
+    function handleChange6(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC6(["LANÇA DE BATALHA", "D12 + 2 de Dano"])
+        }else if (valor == 2){
+            setC6(["ESTANDARTE DE GUERRA", "Dobra o seu dano no terreno Inserido"])
+        }else{
+            setC6(["CHICOTE METÁLICO", "D8 + D6 de Dano"])
+        }
+    }
+    function handleChange7(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC7(["ARMADURA DE PLACAS", "D8 + D4 de Armor"])
+        }else if (valor == 2){
+            setC7(["COURAÇA DE METAL", "D8 + 2 de Armor"])
+        }else{
+            setC7(["TÚNICA DO CRUZADO", "D12 + 2 de Armor"])
+        }
+    }
+    function handleChange8(e){
+        let valor = e.target.value
+        if (valor == 1){
+            setC8(["CAPACETE DE CRUZADO", "Imune a Decaptação"])
+        }else if (valor == 2){
+            setC8(["ELMO DE CHIFRES", "Bônus de Intimidação ao atacar"])
+        }else{
+            setC8(["INSIGNIA SANCTA", "+2 de Sabedoria Bônus"])
+        }
+    }
     return(
         <Fragment>
             <Title>
@@ -303,17 +387,32 @@ export default function Cruze(){
                         : 
                         <Fragment>
                             <article>
-                                <select>
-                                    <option>1 SKILL</option>
+                                <select onChange={(e) => handleChange1(e)}>
+                                    <option>Escolha sua Skill Primária</option>
+                                    <option value={'1'}> FÉ DE BATALHA</option>
+                                    <option value={'2'}> VETERANO DE GUERRA</option>
+                                    <option value={'3'}> CONTRA-GOLPEADOR</option>
                                 </select>
-                                <select>
-                                    <option>2 SKILL</option>
+                        
+                                <select onChange={(e) => handleChange2(e)}>
+                                    <option>Escolha sua Skill Secundária</option>
+                                    <option value={'1'}> CORTE SEQUENCIAL</option>
+                                    <option value={'2'}> MULTILADOR</option>
+                                    <option value={'3'}> ARREMESSO DE ARMA PESADA</option>
                                 </select>
-                                <select> 
-                                    <option>3 SKILL</option>
+                            
+                                <select onChange={(e) => handleChange3(e)}>
+                                    <option>Escolha sua Skill Bônus</option>
+                                    <option value={'1'}> MÃOS PESADAS</option>
+                                    <option value={'2'}> ESQUIVA PESADA</option>
+                                    <option value={'3'}> ESCUDEIRO NATO</option>
                                 </select>
-                                <select>
-                                    <option>4 SKILL</option>
+                            
+                                <select onChange={(e) => handleChange4(e)}>
+                                    <option>Escolha sua Ultimate</option>
+                                    <option value={'1'}> 'FAZ O URRO'</option>
+                                    <option value={'2'}> MISERICORDIOSO</option>
+                                    <option value={'3'}> O ULTIMO HOMEM</option>
                                 </select>
                             </article>
                         </Fragment>}
@@ -325,39 +424,54 @@ export default function Cruze(){
                         <Fragment>
                             <header></header>
                             <div>
-                                ESPADA DE AÇO
-                                <p>D8 + 4 de Dano</p>
+                                {C5[0]}
+                                <p>{C5[1]}</p>
                             </div>
                             <div>
-                                LANÇA DE BATALHA
-                                <p>D12 + 1 de Dano</p>
+                                {C6[0]}
+                                <p>{C6[1]}</p>
                             </div>
                             <div>
-                                ARMADURA DE PLACAS
-                                <p>D8 + D4 de Armor</p>
+                                {C7[0]}
+                                <p>{C7[1]}</p>
                             </div>
                             <div>
-                                CAPACETE DE CRUZADO
-                                <p>Imune a Decapitação</p>
+                                {C8[0]}
+                                <p>{C8[1]}</p>
                             </div> 
                         </Fragment>: 
                         
                         <Fragment>
                             <article>
-                                <select>
-                                    <option>1.1 ITEM</option>
-                                    <option>1.2 ITEM</option>
+                                <select onChange={(e) => handleChange5(e)}>
+                                    <option>Escolha seu Item Primário</option>
+                                    <option value={'1'}> ESPADA DE AÇO</option>
+                                    <option value={'2'}> MACHADO DE BATALHA</option>
+                                    <option value={'3'}> CIMITARRA DE BRONZE</option>
                                 </select>
-                                <select>
-                                    <option>2 ITEM</option>
+                        
+                                <select onChange={(e) => handleChange6(e)}>
+                                    <option>Escolha seu Item Secundário</option>
+                                    <option value={'1'}> LANÇA DE BATALHA</option>
+                                    <option value={'2'}> ESTANDARTE DE GUERRA</option>
+                                    <option value={'3'}> CHICOTE METÁLICO</option>
                                 </select>
-                                <select> 
-                                    <option>3 ITEM</option>
+                            
+                                <select onChange={(e) => handleChange7(e)}>
+                                    <option>Escolha seu Item Defensivo</option>
+                                    <option value={'1'}> ARMADURA DE PLACAS</option>
+                                    <option value={'2'}> COURAÇA DE METAL</option>
+                                    <option value={'3'}> TUNICA DO CRUZADO</option>
                                 </select>
-                                <select>
-                                    <option>4 ITEM</option>
+                            
+                                <select onChange={(e) => handleChange8(e)}>
+                                    <option>Escolha seu Item Bônus</option>
+                                    <option value={'1'}> CAPACETE DE CRUZADO</option>
+                                    <option value={'2'}> ELMO DE CHIFRES</option>
+                                    <option value={'3'}> INSIGNIA SANCTA</option>
                                 </select>
                             </article>
+
                         </Fragment>}
                         
                     </Part1>

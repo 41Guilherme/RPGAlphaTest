@@ -9,10 +9,10 @@ export const StatesProvider2 = ({children}) => {
     const [C2, setC2] = useState(["CORTE SEQUENCIAL","Ao matar inimigos ganha um novo turno"])
     const [C3, setC3] = useState(["MÃOS PESADAS", "Seus ataques atordoam alvos com pouca vida"])
     const [C4, setC4] = useState(['"FAZ O URRO"',"Um grito que buffa aliados e nerfa inimigos"])
-    const [C5, setC5] = useState('')
-    const [C6, setC6] = useState('')
-    const [C7, setC7] = useState('')
-    const [C8, setC8] = useState('')
+    const [C5, setC5] = useState(["ESPADA DE AÇO","D8 + 4 de Dano"])
+    const [C6, setC6] = useState(["LANÇA DE BATALHA","D12 + 1 de Dano"])
+    const [C7, setC7] = useState(["ARMADURA DE PLACAS","D8 + D4 de Armor"])
+    const [C8, setC8] = useState(["CAPACETE DE CRUZADO","Imune a Decapitação"])
 
 
     const [L1, setL1] = useState('')
